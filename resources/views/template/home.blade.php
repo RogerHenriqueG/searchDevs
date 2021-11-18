@@ -6,38 +6,37 @@
     <header id="header" class="fixed-top d-flex align-items-center header-transparent">
         <div class="container d-flex justify-content-between align-items-center">
 
-            <div class="logo">
-                <h1 class="text-light"><a href="index.html"><span>Moderna</span></a></h1>
+            <div class="logo h-auto">
+{{--                <h1 class="text-light"><a href="index.html"><span></span></a></h1>--}}
                 <!-- Uncomment below if you prefer to use an image logo -->
-                <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+                <a href="" class="h-auto"><img src="/assets/img/Logo1.png" alt="" width="300px" class="img-fluid"></a>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="active " href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Drop Down 1</a></li>
-                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                                <ul>
-                                    <li><a href="#">Deep Drop Down 1</a></li>
-                                    <li><a href="#">Deep Drop Down 2</a></li>
-                                    <li><a href="#">Deep Drop Down 3</a></li>
-                                    <li><a href="#">Deep Drop Down 4</a></li>
-                                    <li><a href="#">Deep Drop Down 5</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Drop Down 2</a></li>
-                            <li><a href="#">Drop Down 3</a></li>
-                            <li><a href="#">Drop Down 4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a class="active " href="">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Serviços</a></li>
+                    <li><a href="">Portfolio</a></li>
+                    <li><a href="">Time</a></li>
+{{--                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>--}}
+{{--                        <ul>--}}
+{{--                            <li><a href="#">Drop Down 1</a></li>--}}
+{{--                            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>--}}
+{{--                                <ul>--}}
+{{--                                    <li><a href="#">Deep Drop Down 1</a></li>--}}
+{{--                                    <li><a href="#">Deep Drop Down 2</a></li>--}}
+{{--                                    <li><a href="#">Deep Drop Down 3</a></li>--}}
+{{--                                    <li><a href="#">Deep Drop Down 4</a></li>--}}
+{{--                                    <li><a href="#">Deep Drop Down 5</a></li>--}}
+{{--                                </ul>--}}
+{{--                            </li>--}}
+{{--                            <li><a href="#">Drop Down 2</a></li>--}}
+{{--                            <li><a href="#">Drop Down 3</a></li>--}}
+{{--                            <li><a href="#">Drop Down 4</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+                    <li><a href="{{ route('login') }}">Login</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -52,7 +51,7 @@
             <!-- Slide 1 -->
             <div class="carousel-item active">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Moderna</span></h2>
+                    <h2 class="animate__animated animate__fadeInDown">Bem vindo ao  <span>SearchDevs</span></h2>
                     <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
                     <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
                 </div>
