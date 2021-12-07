@@ -23,6 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if(auth()->user()->user_type == 1){
+            return view('dev.dashboard');
+        } else {
+            return view('user.dashboard');
+        }
     }
 }

@@ -15,10 +15,10 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="active " href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Time</a></li>
+{{--                    <li><a href="">Sobre</a></li>--}}
+{{--                    <li><a href="">Serviços</a></li>--}}
+{{--                    <li><a href="">Portfolio</a></li>--}}
+{{--                    <li><a href="">Time</a></li>--}}
 {{--                    <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>--}}
 {{--                        <ul>--}}
 {{--                            <li><a href="#">Drop Down 1</a></li>--}}
@@ -52,28 +52,20 @@
             <div class="carousel-item active">
                 <div class="carousel-container">
                     <h2 class="animate__animated animate__fadeInDown">Bem vindo ao  <span>SearchDevs</span></h2>
-                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                    <p class="animate__animated animate__fadeInUp">Aonde você encontra o dev certo para o seu serviço, na linguagem que desejar e do jeito que desejar, construa sua aplicação com os melhores dves do mercado agora mesmo é só se cadastrar</p>
+                    <a href="{{ route('login') }}" class="btn-get-started animate__animated animate__fadeInUp">Cadastre-se</a>
                 </div>
             </div>
 
             <!-- Slide 2 -->
             <div class="carousel-item">
                 <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Lorem Ipsum Dolor</h2>
-                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
+                    <h2 class="animate__animated animate__fadeInDown">Aqui é o melhor Lugar para você Dev</h2>
+                    <p class="animate__animated animate__fadeInUp">Aonde vocẽ tem contato direto com diversos clientes, aonde o serviço corre até você, abrace essa oportunidade de ser um searchDev e venha fazer parte do nosso time de devs</p>
+                    <a href="{{ route('login') }}" class="btn-get-started animate__animated animate__fadeInUp">Cadastre-se</a>
                 </div>
             </div>
 
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <div class="carousel-container">
-                    <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
-                    <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                    <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
-                </div>
-            </div>
 
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>

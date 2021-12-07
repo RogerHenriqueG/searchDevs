@@ -81,8 +81,8 @@
 
                         <div class="d-flex justify-content-center py-4">
                             <a href="index.html" class="logo d-flex align-items-center w-auto">
-                                <img src="assets/img/logo.png" alt="">
-                                <span class="d-none d-lg-block">NiceAdmin</span>
+                                <img src="assets/img/Logo3.png" alt="" style="width: 200px; max-height: 150px !important;">
+{{--                                <span class="d-none d-lg-block">NiceAdmin</span>--}}
                             </a>
                         </div><!-- End Logo -->
 
@@ -91,51 +91,62 @@
                             <div class="card-body">
 
                                 <div class="pt-4 pb-2">
-                                    <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
-                                    <p class="text-center small">Enter your username & password to login</p>
+                                    <h5 class="card-title text-center pb-0 fs-4" style="color: #FF5C00 ;">Faça login na sua conta</h5>
+                                    <p class="text-center small">Digite seu e-mail e senha para fazer o login</p>
                                 </div>
 
-                                <form class="row g-3 needs-validation" novalidate>
+                                <form class="row g-3 needs-validation" method="POST" action="{{ route('login') }}">
+                                    @csrf
 
                                     <div class="col-12">
-                                        <label for="yourUsername" class="form-label">Username</label>
+                                        <label for="yourUsername" class="form-label">E-mail</label>
                                         <div class="input-group has-validation">
-                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                            <input type="text" name="username" class="form-control" id="yourUsername" required>
-                                            <div class="invalid-feedback">Please enter your username.</div>
+                                            <input type="text" name="email" class="form-control @error('email') is-invalid @enderror" id="yourUsername" value="{{ old('email') }}" required>
+{{--                                            <div class="invalid-feedback">Por favor, insira seu e-mail!</div>--}}
+
+                                            @error('email')
+                                                <span class="invalid-feedback" role="alert">
+                                                    {{ $message }}
+                                                </span>
+                                            @enderror
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <label for="yourPassword" class="form-label">Password</label>
-                                        <input type="password" name="passwword" class="form-control" id="yourPassword" required>
-                                        <div class="invalid-feedback">Please enter your password!</div>
+                                        <label for="yourPassword" class="form-label">Senha</label>
+                                        <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="yourPassword" required autocomplete="current-password">
+                                        <div class="invalid-feedback">Por favor, insira sua senha!</div>
+                                        @error('password')--}}
+                                            <span class="invalid-feedback" role="alert">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
 
                                     <div class="col-12">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                                            <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe" {{ old('remember') ? 'checked' : '' }}>
+                                            <label class="form-check-label" for="rememberMe">Lembre-me</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary w-100" type="submit">Login</button>
+                                        <button class="btn w-100" style="background-color: #FF5C00 ; color: #ffffff;" type="submit">Entrar</button>
                                     </div>
                                     <div class="col-12">
-                                        <p class="small mb-0">Don't have account? <a href="pages-register.html">Create an account</a></p>
+                                        <p class="small mb-0">Não tem conta? <a href="{{ route('select') }}">Crie sua conta</a></p>
                                     </div>
                                 </form>
 
                             </div>
                         </div>
 
-                        <div class="credits">
-                            <!-- All the links in the footer should remain intact. -->
-                            <!-- You can delete the links only if you purchased the pro version. -->
-                            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                        </div>
+{{--                        <div class="credits">--}}
+{{--                            <!-- All the links in the footer should remain intact. -->--}}
+{{--                            <!-- You can delete the links only if you purchased the pro version. -->--}}
+{{--                            <!-- Licensing information: https://bootstrapmade.com/license/ -->--}}
+{{--                            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->--}}
+{{--                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>--}}
+{{--                        </div>--}}
 
                     </div>
                 </div>
@@ -145,9 +156,6 @@
 
     </div>
 </main><!-- End #main -->
-
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
 <!-- Vendor JS Files -->
 <script src="/dash/vendor/bootstrap/js/bootstrap.bundle.js"></script>
 <script src="/dash/vendor/php-email-form/validate.js"></script>

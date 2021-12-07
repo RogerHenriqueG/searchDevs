@@ -18,4 +18,16 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('home');
+
+Route::get('/oque-sou', function (){
+    return view('auth.select');
+})->name('select');
+
+Route::get('/register-dev', function (){
+    return view('auth.registerdev');
+})->name('register.dev');
+
+Route::group(['middleware' =>  'auth'], function () {
+
+});
